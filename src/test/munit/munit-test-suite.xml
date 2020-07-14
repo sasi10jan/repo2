@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="munit-test-suite.xml" />
+	<munit:test name="munit-test-suite-munitFlowTest" doc:id="3617413e-31f5-45ed-86f8-ebf779036b2f" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to munitFlow" doc:id="77d762e3-9230-4eb5-ac7b-04f65f014960" name="munitFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="7031b18b-aa72-4921-b4d0-fd847790af0d" message="'failed!!!!'" expression="#[payload]" is='#[MunitTools::containsString("sasikala")]'/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

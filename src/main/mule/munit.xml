@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="munitFlow" doc:id="120ea263-1490-43e4-bd98-8d539ca7825f" >
+		<set-variable value="sasikala" doc:name="Set Variable" doc:id="7563b8bc-810d-4299-83e7-a46d4787f865" variableName="Myname"/>
+		<set-payload value="#[vars.Myname]" doc:name="Set Payload" doc:id="626a9832-8ade-47c9-a816-efb775a9fb6e" />
+	</flow>
+</mule>
